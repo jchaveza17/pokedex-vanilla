@@ -1,0 +1,34 @@
+h1{
+    text-align: center;
+    margin-top: 75px;
+}
+
+form{
+    text-align: center;
+
+}
+input[type=text]{
+    width: 25rem;
+    height: 2.5rem;
+    outline: none;
+}
+
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  
+  .pokemonCard {
+    background-color: #ffffff;
+    border: 1px solid black;
+    border-radius: 8px;
+    box-shadow: black;
+    padding: 20px;
+    width: calc(20% - 1px);
+    margin-bottom: 20px; 
+    text-align: center;
+  }
+  
