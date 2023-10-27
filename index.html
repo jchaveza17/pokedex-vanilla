@@ -7,7 +7,6 @@
     <title>Pokedex</title>
 
     <link rel="stylesheet" href="index.css" />
-    <script src="index.js"></script>
 </head>
 
 <body>
@@ -15,63 +14,19 @@
     <h1>Pokedex</h1>
 
     <form>
-        <input type="text" placeholder="Enter Pokemon Name">
+        <input type="text" placeholder="Enter Pokemon Name" id="searchPokemon">
     </form>
 
-    <div class="cardContainer">
-
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
-        </div>
-        <div class="pokemonCard">
-            <div class="pokemonSprite"></div>
-            <p>Name:</p>
-            <p>Type:</p>
-            <p>Pokedex Entry:</p>
+    <div class="cardContainer" id="pokemonContainer">
+        <div class="pokemonCard" id="pokemonCard">
+            <p class="pokeDexEntry">Pokedex Entry:</p>
+            <p class="pokeName">Name:</p>
+            <p class="pokeType">Type:</p>
         </div>
     </div>
 
 
-
+    <script src="index.js"></script>
 </body>
 
 </html>
