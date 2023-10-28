@@ -1,22 +1,21 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const pokemonList = document.querySelector('.cardContainer');
+async function getPokemonData() {
+  try {
+    const response = await axios.get('https://pokeapi.co/api/v2/generation/1/');
+    const pokemonData = response.data;
 
-  async function getPokemonNames() {
-    try {
-      const response = await axios.get(
-        'https://pokeapi.co/api/v2/generation/1/'
+    for (pokemonEntry of pokemonData.pokemon_species) {
+      const pokemon = pokemonEntry.name;
+
+      const pokemonType = await axios.get(
+        `https://pokeapi.co/api/v2/pokemon/${pokemon}`
       );
-      const data = response.data;
-      const pokemonNames = data.pokemon_species;
+      const types = pokemonType.data.types.map((type) => type.type.name);
+      const pokemonID = pokemonType.data.id;
 
-      pokemonNames.forEach((pokemon) => {
-        const pokeList = document.createElement('li');
-        pokeList.textContent = pokemon.name;
-        pokemonList.appendChild(pokeList);
-      });
-    } catch (error) {
-      console.error('Error fetching Pokémon data:', error);
+      console.log(pokemonID);
+      console.log(pokemon);
+      console.log(types);
     }
-  }
-  getPokemonNames();
-});
+  } catch (error) {}
+}
+getPokemonData();
