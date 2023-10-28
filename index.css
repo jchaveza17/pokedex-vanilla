@@ -5,8 +5,13 @@ h1{
 
 form{
     text-align: center;
-
 }
+
+body{
+  background-image: url("https://i.pinimg.com/originals/a1/86/a8/a186a8aff83506c70b0b307e3fb062c8.png");
+  background-size: cover;
+}
+
 input[type=text]{
     width: 25rem;
     height: 2.5rem;
@@ -31,7 +36,7 @@ input[type=text]{
     width: calc(15% - 1px);
     margin-bottom: 20px; 
     text-align: center;
-    height: 15rem;
+    height: 13rem;
   }
 
   .pokemonCard:hover{
@@ -40,4 +45,7 @@ input[type=text]{
     transition: all 1s ease;
   }
   
+  .cardContainer:hover > .pokemonCard:not(:hover) {
+    filter: blur(4px);
+  }
   
