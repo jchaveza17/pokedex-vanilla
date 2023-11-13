@@ -39,6 +39,12 @@ input[type=text]{
     height: 13rem;
   }
 
+  .cardContainer img {
+    width: 13rem;
+    height: 13rem;
+    justify-content: center;
+  }
+
   .cardContainer li:hover{
     cursor: pointer;
     transform: scale(1.2);

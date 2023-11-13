@@ -29,11 +29,16 @@ async function getPokemonData() {
       );
       const types = pokemonType.data.types.map((type) => type.type.name);
       const pokemonID = pokemonType.data.id;
+      const sprite = pokemonType.data.sprites.front_default;
 
       const listItem = document.createElement('li');
       listItem.textContent = `Dex Entry: ${pokemonID} Name: ${
         pokemon[0].toUpperCase() + pokemon.slice(1)
       } Types: ${types.join(', ')}`;
+
+      const pokemonSprites = document.createElement('img');
+      pokemonSprites.src = sprite;
+      listItem.appendChild(pokemonSprites);
 
       cardContainer.appendChild(listItem);
     }
