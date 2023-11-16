@@ -16,8 +16,16 @@ input[type=text]{
     width: 25rem;
     height: 2.5rem;
     outline: none;
+    border: 2px solid black; 
+    border-radius: 8px;
 }
 
+.cardContainer h4{
+  font-size: medium;
+  text-align: left;
+  position: relative;
+  top: -20px;
+}
 
 .cardContainer {
     display: flex;
@@ -25,25 +33,35 @@ input[type=text]{
     justify-content: space-evenly;
     margin-top: 100px;
   }
-  
-  .cardContainer li{  
+    
+  .pokemon-card {
+    display: flex;
+    flex-direction: column;
     list-style-type: none;
-    background-color: #ffffff;
-    border: 1px solid black;
+    border: 3px solid yellow;
     border-radius: 8px;
     box-shadow: black;
     padding: 20px;
     width: calc(15% - 1px);
-    margin-bottom: 20px; 
-    text-align: left;
-    height: 13rem;
+    margin-bottom: 20px;
+    height: 18rem;
   }
 
-  .cardContainer img {
-    width: 13rem;
-    height: 13rem;
-    justify-content: center;
-  }
+ .pokemon-image{
+  width: 6rem;
+  height: 6rem;
+  width: 200px; 
+  height: 150px; 
+  margin: 0 auto; 
+  border: 2px solid black; 
+  border-radius: 8px; 
+  background-color: #EDEDED;
+ }
+
+ .pokemon-info{
+  font-size: 1rem;
+  text-align: row;
+ }
 
   .cardContainer li:hover{
     cursor: pointer;
